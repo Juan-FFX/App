@@ -1,0 +1,4 @@
+#Tue Jan 11 14:32:22 CST 2022
+base.0=/home/ssc_juan/Proyectos F/sistemas/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
