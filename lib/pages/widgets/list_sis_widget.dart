@@ -9,26 +9,27 @@ class ListSisWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        padding: EdgeInsets.only(
-            left: _listPadding, right: _listPadding, top: _listPadding),
-        shrinkWrap: true,
-        itemCount: _Sys.length,
-        itemBuilder: (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.only(bottom: 50.0),
-            child: Stack(
-              alignment: Alignment.center,
-              fit: StackFit.loose,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: _sisIfo(index),
-                ),
-              ],
-            ),
-          );
-        });
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 50.0),
+      child: Stack(
+        alignment: Alignment.center,
+        fit: StackFit.loose,
+        children: listSistemas(),
+      ),
+    );
+  }
+
+  List<Widget> listSistemas() {
+    List<Widget> valores = [];
+    for (var i = 0; i < _Sys.length; i++) {
+      valores.add(
+        Align(
+          alignment: Alignment.center,
+          child: _sisIfo(i),
+        ),
+      );
+    }
+    return valores;
   }
 
   Widget _sisIfo(int index) {
